@@ -2,6 +2,33 @@
 Self-Driving Car Engineer Nanodegree Program
 
 ---
+## Project Description:
+In this project, we are using PID controller to compute steering measurements to drive the simulation vehcile developed in Unity to stay on track. Simulator produces the error signal as the distance between the actual car position on the road and a reference trajectory, known as cross-track error (cte). The PID controller is designed to minimize the distance to this reference trajectory.
+## File included:
+1. main.cpp - the main function to connect simulater to pid controller 
+2. pid.cpp - the acutal implemented pid initialize, update, and calculate totatl error
+3. pid.h
+4. jason
+
+###  P - Proportional Gain
+The proportional gain is computed with k_p * cte.
+
+### D - Differential Gain
+The derivative gain is computed with the form -K_d * d/dt(cte).
+
+### I - Integral Gain
+The Intergral gain is computed as the sum of the total error:  -K_i * sum(cte).
+
+## Hyperparameter Tuning
+ all the parameter is manully turned in this project, and it worked pretty well, so I didn't try twiddle in the project,
+ first I try the p-gain with the other two fixed to see how the performance works, then I twick the ingral and defferential
+ to see how the car responses in the simulator, the twicking process is trade to get the best result.
+ the final parameter is used with initial as [0.20, 0.0003,  3.5].
+## Result
+the link below is the result of the vehicle in the simulator
+
+
+## The detailed Instruction is shown below :
 
 ## Dependencies
 
