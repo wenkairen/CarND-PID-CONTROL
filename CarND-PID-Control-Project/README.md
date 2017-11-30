@@ -26,7 +26,7 @@ The Intergral gain is computed as the sum of the total error:  -K_i * sum(cte).
  the final parameter is used with initial as [0.20, 0.0003,  3.5].
 ## Result
 the link below is the result of the vehicle in the simulator
-
+![test video.mp4](https://github.com/wenkairen/CarND-PID-CONTROL/blob/master/CarND-PID-Control-Project/test%20video.mp4)
 
 ## The detailed Instruction is shown below :
 
