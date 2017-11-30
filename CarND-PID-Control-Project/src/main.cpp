@@ -29,10 +29,8 @@ std::string hasData(std::string s) {
   return "";
 }
 
-// 
-bool init;
+// init
 double prev_time;
-double dt;
 double throttle;
 
 int main()
