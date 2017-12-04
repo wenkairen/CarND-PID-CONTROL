@@ -19,6 +19,13 @@ The derivative gain is computed with the form -K_d * d/dt(cte).
 ### I - Integral Gain
 The Intergral gain is computed as the sum of the total error:  -K_i * sum(cte).
 
+### Imapct of PID controller on the car
+The proportional portion of the controller P tries to steer the car towards the reference trajectory in the right direction, but if we only use p to the control the car, it will overshoot and cause oscillations, which can easily get out od the track.
+
+The differential portion D helps to counteract the proportional trend to overshoot the center line by smoothing the approach to it, so it basicly conteract the oscillations caused by the controller, so when PD are combined together can make the car drive even more smoolthly towards the trajectory without oscillations.
+
+The integral portion I is implemented to reduce the bias of the cars trajactory respect the to the referrence, which takes into account the total accumulated error cte, using PID control parameter together can make sure the car stays on track in more stablized way.
+
 ## Hyperparameter Tuning
  all the parameter is manully turned in this project, and it worked pretty well, so I didn't try twiddle in the project,
  first I try the p-gain with the other two fixed to see how the performance works, then I twick the ingral and defferential
