@@ -10,22 +10,12 @@ public:
   double p_error;
   double i_error;
   double d_error;
-  double prev_cte;
   /*
   * Coefficients
   */ 
   double Kp;
   double Ki;
   double Kd;
-
-
-  /*
-  * Twiddle Parameter
-  */
-  int iteration; // for calculating steps during the lap. 
-  int steps; // for counting steps before start capturing err
-  int eval_steps; // after params have settled, capture new error
-  double err; // error in each ecaluation
 
   /*
   * Constructor
@@ -40,7 +30,7 @@ public:
   /*
   * Initialize PID.
   */
-  void Init(double Kp, double Ki, double Kd);
+  void Init(double kp, double ki, double kd);
 
   /*
   * Update the PID error variables given cross track error.
